@@ -49,6 +49,9 @@
             2,
             "consistent"
         ],
-        "react/jsx-uses-react": 2
+        "react/jsx-uses-react": 2,
+        "import/no-dynamic-require": 0,
+        "global-require": 0,
+        "function-paren-newline": 0
     }
 }
