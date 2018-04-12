@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ItemList from '../containers/ItemListContainer';
+import AddItem from '../containers/AddItem';
 import logo from '../../images/logo.svg';
 import '../../css/App.css';
 
@@ -13,6 +15,8 @@ class App extends Component {
                 <p className="App-intro">
                     To get started, foo edit <code>src/App.js</code> and save to reload.
                 </p>
+                <ItemList />
+                <AddItem />
             </div>
         );
     }
