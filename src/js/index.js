@@ -6,6 +6,8 @@ import logger from 'redux-logger';
 import rootReducer from './reducers';
 import App from './components/App';
 import registerServiceWorker from './lib/registerServiceWorker';
+
+// Load CSS
 import '../css/index.css';
 
 const store = createStore(
