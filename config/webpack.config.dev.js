@@ -1,5 +1,3 @@
-'use strict';
-
 const autoprefixer = require('autoprefixer');
 const path = require('path');
 const webpack = require('webpack');
@@ -157,9 +155,11 @@ module.exports = {
                     // In production, we use a plugin to extract that CSS to a file, but
                     // in development "style" loader enables hot editing of CSS.
                     {
-                        test: /\.css$/,
+                        test: /\.(s*)css$/,
                         use: [
-                            require.resolve('style-loader'),
+                            {
+                                loader: require.resolve('style-loader'),
+                            },
                             {
                                 loader: require.resolve('css-loader'),
                                 options: {
@@ -185,6 +185,9 @@ module.exports = {
                                         }),
                                     ],
                                 },
+                            },
+                            {
+                                loader: require.resolve('sass-loader'),
                             },
                         ],
                     },
