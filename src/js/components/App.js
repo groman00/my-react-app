@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import logo from '../../images/logo.svg';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Contact from '../pages/Contact';
+import Categories from '../pages/Categories';
+import NotFound from '../pages/NotFound';
 import '../../css/App.css';
 
 class App extends Component {
@@ -17,12 +18,15 @@ class App extends Component {
                         <ul>
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/about">About</Link></li>
-                            <li><Link to="/contact">Contact</Link></li>
+                            <li><Link to="/category">Categories</Link></li>
                         </ul>
                     </header>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/contact" component={Contact}/>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/category" component={Categories}/>
+                        <Route component={NotFound}/>
+                    </Switch>
                 </div>
             </Router>
         );
