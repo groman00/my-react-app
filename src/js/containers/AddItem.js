@@ -8,6 +8,8 @@ const AddItem = ({ dispatch }) => {
     return (
         <div>
             <form
+                class="text-center"
+                style={{ padding: '20px' }}
                 onSubmit={(e) => {
                     e.preventDefault();
                     if (!input.value.trim()) {

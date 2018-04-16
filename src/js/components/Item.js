@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Item = ({ text }) => (
-    <li>
+    <div className="text-center">
         {text}
-    </li>
+    </div>
 );
 
 export default Item;

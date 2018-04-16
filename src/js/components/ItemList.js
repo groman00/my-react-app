@@ -2,11 +2,11 @@ import React from 'react';
 import Item from './Item';
 
 const ItemList = ({ items }) => (
-    <ul>
+    <div className="grid gt-columns-4">
         {items.map((item, index) => (
             <Item key={index} {...item} />
         ))}
-    </ul>
+    </div>
 );
 
 export default ItemList;
