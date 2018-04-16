@@ -1,0 +1,41 @@
+/* https://gridbyexample.com/examples/ */
+$indexes: 1,2,3,4,5,6,7,8,9,10,11,12;
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+
+    > div {
+        background-color: slategray;
+    }
+}
+
+@each $columns in $indexes {
+    .gt-columns-#{$columns} {
+        grid-template-columns: repeat(#{$columns}, 1fr);
+    }
+}
+
+@each $startCol in $indexes {
+    .gc-start-#{$startCol} {
+        grid-column-start: #{$startCol};
+    }
+}
+
+@each $endCol in $indexes {
+    .gc-end-#{$endCol} {
+        grid-column-end: #{$endCol};
+    }
+}
+
+@each $startRow in $indexes {
+    .gr-start-#{$startRow} {
+        grid-row-start: #{$startRow};
+    }
+}
+
+@each $endRow in $indexes {
+    .gr-end-#{$endRow} {
+        grid-row-end: #{$endRow};
+    }
+}
