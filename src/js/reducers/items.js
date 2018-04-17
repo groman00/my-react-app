@@ -13,7 +13,6 @@ const items = (state = initialState, action) => {
             return state;
         case 'GET_ITEMS_OK':
             return [
-                ...state,
                 ...action.items
             ];
         case 'GET_ITEMS_FAIL':
