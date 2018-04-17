@@ -8,14 +8,16 @@ class ItemListContainer extends Component {
         this.props.getItems();
     }
     render() {
+        const { items, status } = this.props;
         return (
-            <ItemList items={this.props.items}/>
+            <ItemList items={items} loading={status}/>
         );
     }
 }
 
 const mapStateToProps = state => ({
-    items: state.items
+    items: state.items,
+    status: state.status
 });
 
 const mapDispatchToProps = dispatch => ({

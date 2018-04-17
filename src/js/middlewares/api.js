@@ -11,10 +11,12 @@ const apiMiddleware = store => next => (action) => {
                 .then((json) => {
                     console.log(json);
                     const { items } = json;
-                    next({
-                        type: 'GET_ITEMS_OK',
-                        items
-                    });
+                    setTimeout(() => { // Simulate latency
+                        next({
+                            type: 'GET_ITEMS_OK',
+                            items
+                        });
+                    }, 1000);
                 })
                 .catch((e) => {
                     // console.log(e);

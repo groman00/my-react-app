@@ -10,7 +10,6 @@ const items = (state = initialState, action) => {
                 }
             ];
         case 'GET_ITEMS':
-            // Set loading state to true
             return state;
         case 'GET_ITEMS_OK':
             return [
