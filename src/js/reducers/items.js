@@ -1,9 +1,4 @@
-const initialState = [
-    { text: 'foo' },
-    { text: 'bar' },
-    { text: 'fizz' },
-    { text: 'buzz' }
-];
+const initialState = [];
 
 const items = (state = initialState, action) => {
     switch (action.type) {
@@ -14,6 +9,15 @@ const items = (state = initialState, action) => {
                     text: action.text
                 }
             ];
+        case 'GET_ITEMS':
+            return state;
+        case 'GET_ITEMS_OK':
+            return [
+                ...state,
+                ...action.items
+            ];
+        case 'GET_ITEMS_FAIL':
+            return state;
         default:
             return state;
     }
