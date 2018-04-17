@@ -8,7 +8,7 @@ const AddItem = ({ dispatch }) => {
     return (
         <div>
             <form
-                class="text-center"
+                className="text-center"
                 style={{ padding: '20px' }}
                 onSubmit={(e) => {
                     e.preventDefault();

@@ -1,18 +1,28 @@
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addItem } from '../actions';
+import { getItems } from '../actions';
 import ItemList from '../components/ItemList';
+
+class ItemListContainer extends Component {
+    componentWillMount() {
+        this.props.getItems();
+    }
+    render() {
+        return (
+            <ItemList items={this.props.items}/>
+        );
+    }
+}
 
 const mapStateToProps = state => ({
     items: state.items
 });
 
 const mapDispatchToProps = dispatch => ({
-    addItem: text => dispatch(addItem(text))
+    getItems: () => dispatch(getItems())
 });
 
-const ItemListContainer = connect(
+export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(ItemList);
-
-export default ItemListContainer;
+)(ItemListContainer);
