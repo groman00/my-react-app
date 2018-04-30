@@ -1,2 +1,27 @@
-$dark-gray: #333;
 $white: #fff;
+$black: #000;
+$inkwell: #1D2228;
+$charcoal: #464E54;
+$shark: #828C93;
+$dirty-seagull: #E0E4E9;
+$screen-bg: #161616;
+$finance-green: #00B061;
+$swedish-fish: #FF333A;
+$smurfette: #188FFF;
+$button-blue-pressed: #003DBD;
+$button-inactive: #B9BDC5;
+$eggshell: #FAFAFA;
+
+$colors: ();
+$colors: map-merge((
+    'white': $white,
+    'black': $black,
+    'inkwell': $inkwell,
+    'charcoal': $charcoal,
+    'shark': $shark,
+    'dirty-seagull': $dirty-seagull,
+    'finance-green': $finance-green,
+    'swedish-fish': $swedish-fish,
+    'smurfette': $smurfette,
+    'eggshell': $eggshell
+), $colors);

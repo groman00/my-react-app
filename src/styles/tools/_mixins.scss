@@ -1,3 +1,9 @@
-@mixin text-offscreen() {
-    text-indent: -9999px;
+@mixin font-face($family, $name, $weight, $style) {
+    @font-face {
+        font-family: $family;
+        src: url('../fonts/#{$name}/#{$name}.woff2') format('woff2'),
+             url('../fonts/#{$name}/#{$name}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
 }

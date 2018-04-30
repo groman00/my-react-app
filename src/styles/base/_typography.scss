@@ -1,3 +1,60 @@
+@each $font-size, $value in $font-sizes {
+    .#{$font-size} {
+        font-size: $value;
+    }
+}
+
+@each $font-face in $font-faces {
+    @include font-face(
+        'Yahoo Sans',
+        map-get($font-face, 'name'),
+        map-get($font-face, 'weight'),
+        map-get($font-face, 'style')
+    );
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Yahoo Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    color: inherit;
+}
+
+h1, .h1 {
+    font-size: $font-size-huge;
+    line-height: 1.2;
+    font-weight: 900;
+}
+
+h2, .h2 {
+    font-size: $font-size-largest;
+    line-height: 1.1875;
+    font-weight: 800;
+}
+
+h3, .h3 {
+    font-size: $font-size-larger;
+    line-height: 1.1875;
+    font-weight: 800;
+}
+
+h4, .h4 {
+    font-size: $font-size-large;
+    line-height: 1.08;
+    font-weight: 700;
+}
+
+h5, .h5 {
+    font-size: $font-size-large;
+    line-height: 0.7;
+    font-weight: 900;
+}
+
+h6, .h6 {
+    font-size: $font-size-large;
+    line-height: 1.08;
+    font-weight: 500;
 }

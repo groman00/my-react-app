@@ -1,1 +1,70 @@
+$font-size-smallest: 10px;
+$font-size-smaller: 12px;
 $font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-medium: 20px;
+$font-size-large: 26px;
+$font-size-larger: 28px;
+$font-size-largest: 32px;
+$font-size-huge: 48px;
+
+$font-sizes: ();
+$font-sizes: map-merge((
+    'font-size-smallest': $font-size-smallest,
+    'font-size-smaller': $font-size-smaller,
+    'font-size-small': $font-size-small,
+    'font-size-base': $font-size-base,
+    'font-size-medium': $font-size-medium,
+    'font-size-large': $font-size-large,
+    'font-size-larger': $font-size-larger,
+    'font-size-largest': $font-size-largest,
+    'font-size-huge': $font-size-huge
+), $font-sizes);
+
+$font-faces: (
+    (
+        'name': 'YahooSansExtraLight',
+        'weight': 200,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansLight',
+        'weight': 300,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansRegular',
+        'weight': 400,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansItalic',
+        'weight': 400,
+        'style': italic
+    ),
+    (
+        'name': 'YahooSansMedium',
+        'weight': 500,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansSemibold',
+        'weight': 600,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansBold',
+        'weight': 700,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansExtraBold',
+        'weight': 800,
+        'style': normal
+    ),
+    (
+        'name': 'YahooSansBlack',
+        'weight': 900,
+        'style': normal
+    )
+);

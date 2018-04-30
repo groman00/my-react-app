@@ -1,0 +1,26 @@
+@each $spacing, $value in $spacings {
+    .ml-#{$spacing} {
+        margin-left: $value;
+    }
+    .mr-#{$spacing} {
+        margin-right: $value;
+    }
+    .mt-#{$spacing} {
+        margin-top: $value;
+    }
+    .mb-#{$spacing} {
+        margin-bottom: $value;
+    }
+    .pl-#{$spacing} {
+        padding-left: $value;
+    }
+    .pr-#{$spacing} {
+        padding-right: $value;
+    }
+    .pt-#{$spacing} {
+        padding-top: $value;
+    }
+    .pb-#{$spacing} {
+        padding-bottom: $value;
+    }
+}

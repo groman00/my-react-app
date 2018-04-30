@@ -1,9 +1,13 @@
 @import 'settings/colors';
+@import 'settings/spacings';
 @import 'settings/typography';
 
 @import 'tools/mixins';
 
 @import 'base/reset';
-@import 'base/utils';
+
+@import 'base/colors';
 @import 'base/grid';
+@import 'base/spacings';
 @import 'base/typography';
+@import 'base/utils';

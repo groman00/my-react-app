@@ -141,6 +141,14 @@ module.exports = {
                             name: 'static/media/[name].[hash:8].[ext]',
                         },
                     },
+                    {
+                        test: /\.(woff2|woff|eot|ttf)(\?.*)?$/,
+                        loader: require.resolve('url-loader'),
+                        options: {
+                            limit: 10000,
+                            name: 'static/fonts/[name].[hash:8].[ext]'
+                        }
+                    },
                     // Process JS with Babel.
                     {
                         test: /\.(js|jsx|mjs)$/,
